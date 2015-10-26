@@ -13,17 +13,21 @@
 
 'use strict';
 
-var express = require('express');
+var express = require("express");
 
 var app = express();
 
 
-// [START hello_world]
-// Say hello!
-app.get('/', function(req, res) {
-  res.status(200).send('Hello, world!');
-});
-// [END hello_world]
+app.use(express.static("public"));
+
+
+
+// // [START hello_world]
+// // Say hello!
+// app.get('/', function(req, res) {
+//   res.status(200).send('Hello, world!');
+// });
+// // [END hello_world]
 
 
 // [START server]
